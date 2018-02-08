@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <meta content="email=no" name="format-detection">
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <title>device-width宽度测试</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <!-- 页面结构[[ -->
+        <div class="box" style="width: 100%">width : 100%</div>
+        <div class="box" style="width: 1200px">width : 980px</div>
+        <div id="device_width" class="box"></div>
+        <!-- 页面结构]] -->
+    </body>
+    <script>
+
+        var device_width = parseInt(window.innerWidth);
+        document.getElementById('device_width').innerHTML = "当前device-width宽度为：" + device_width;
+        document.getElementById('device_width').style.width = device_width + "px";
+    </script>
+</html>
