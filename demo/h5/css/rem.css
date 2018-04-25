@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html.ten{
+    font-size: 62.5%;
+    text-size-adjust: none;
+}
+
+html.hundred{
+    font-size: 625%;
+}
+body{
+    font-size: 12px;
+}
+.center{
+    text-align: center;
+}
+.ten .pink{
+    width: 34.3rem;
+    height: 10.4rem;
+    display: inline-block;
+    background-color: #FF7F73
+}
+.hundred .pink{
+    width: 3.43rem;
+    height: 1.04rem;
+    display: inline-block;
+    background-color: #FF7F73
+}
+
