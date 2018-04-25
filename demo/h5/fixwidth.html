@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <meta content="email=no" name="format-detection">
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <!-- 设备判断js开始 -->
+        <script type="text/javascript">
+            if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+                var version = parseFloat(RegExp.$1)
+                if (version > 2.3) {
+                    var phoneScale = parseInt(window.screen.width) / 750
+                    document.write('<meta name="viewport" content="width=750,minimum-scale=' + phoneScale + ',maximum-scale=' + phoneScale + ',target-densitydpi=device-dpi">')
+                } else {
+                    document.write('<meta name="viewport" content="width=750,target-densitydpi=device-dpi">')
+                }
+            } else {
+                document.write('<meta name="viewport" content="width=750,user-scalable=no,minimal-ui">')
+                //document.write('<meta name="viewport" content="width=375,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">')
+            }
+        </script>
+        <title>viewport固定值的使用</title>
+        <link rel="stylesheet" href="./css/fix.css">
+    </head>
+    <body>
+        <!-- 页面结构[[ -->
+        <article class="wrap">
+            <img src="./img/banner.jpg"/>
+            <section class="page">
+                <img src="./img/head.png"/>
+            </section>
+            <section class="w750">
+                <ul class="list">
+                    <li><div></div></li>    
+                    <li><div></div></li>    
+                    <li><div></div></li>    
+                    <li><div></div></li>    
+                </ul>
+            </section>
+        </article>
+        <!-- 页面结构]] -->
+    </body>
+</html>
