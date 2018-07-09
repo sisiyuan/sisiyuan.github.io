@@ -19,6 +19,7 @@
         <div class="box" style="width: 1200px">width : 1200px</div>
         <div id="layout_viewport" class="box">layout viewport宽度</div>
         <div id="visual_viewport" class="box">visual viewport宽度</div>
+        <div id="screen_width" class="box">screen_width宽度</div>
 
         <!-- 页面结构]] -->
     </body>
@@ -30,6 +31,9 @@
         //var visual_viewport = parseInt(window.screen.width);
         document.getElementById('visual_viewport').innerHTML = "当前visual viewport宽度为：" + visual_viewport;
         
+        var screen_width = screen.width;
+        document.getElementById('screen_width').innerHTML = "当前screen_width宽度为：" + screen_width;
+
         //手指缩放其实是在改变虚拟窗口的大小
         document.addEventListener('DOMContentLoaded',function() {
                 document.addEventListener('touchstart',function (ev) {//手指点下
