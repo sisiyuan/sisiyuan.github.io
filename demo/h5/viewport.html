@@ -27,15 +27,19 @@
         document.getElementById('layout_viewport').innerHTML = "当前layout viewport宽度为：" + layout_viewport;
 
         var visual_viewport = window.innerWidth;
-        
         //var visual_viewport = parseInt(window.screen.width);
         document.getElementById('visual_viewport').innerHTML = "当前visual viewport宽度为：" + visual_viewport;
         
         //手指缩放其实是在改变虚拟窗口的大小
-        /*
-        document.body.addEventListener('gestureend', function() {
-            alert(window.innerWidth);
-        }, false);
-        */
+        document.addEventListener('DOMContentLoaded',function() {
+                document.addEventListener('touchstart',function (ev) {//手指点下
+                   document.addEventListener('touchmove',function (ev) { //手指移动的时候
+                       if(ev.tatgetTouches.length==2){//判断移动的时候是否是两根手指
+                           visual_viewport = window.innerWidth;
+                           document.getElementById('visual_viewport').innerHTML = "当前visual viewport宽度为：" + visual_viewport;
+                       }
+                   },false)
+                },false)
+            },false)
     </script>
 </html>
