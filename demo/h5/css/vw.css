@@ -32,3 +32,10 @@ body{
     display: inline-block;
     background-color: #FF7F73
 }
+
+.page{
+    width: 90vw;
+    height: 96vh;
+    margin: 2vh auto;
+    background-color: #f0f0f0;
+}
