@@ -16,7 +16,6 @@
     height: 120px;
     border: 1px solid #000;
     margin: 20px;
-    background: url(../img/1.png) no-repeat 50% auto;
 }
 .px-box-border{
     width: 120px;
@@ -39,12 +38,11 @@
     height: 200%;
     content: ' ';
     -webkit-transform: scale(0.5);
-   -webkit-transform-origin: left top;
-   border: 1px solid #000;
+    -webkit-transform-origin: left top;
+    border: 1px solid #000;
 }
 
-
-.px-box-image{
+.px-box-linear{
     width: 120px;
     height: 120px;
     margin: 20px;
@@ -53,6 +51,17 @@
     linear-gradient(to top, #000 50%, transparent 50%) left bottom / 100% 1px no-repeat,
     linear-gradient(to right, #000 50%, transparent 50%) left top / 1px 100% no-repeat,
     linear-gradient(to left, #000 50%, transparent 50%) right top / 1px 100% no-repeat;
+}
+
+.px-box-bgimage{
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    background:
+    url(../img/1bd.png) left top/100% 1px repeat-x, 
+    url(../img/1bd.png) left bottom/100% 1px repeat-x,
+    url(../img/1bd2.png) left top/1px 100% repeat-y,
+    url(../img/1bd2.png) right top/1px 100% repeat-y; 
 }
 
 .mb20{margin-bottom: 20px;}
