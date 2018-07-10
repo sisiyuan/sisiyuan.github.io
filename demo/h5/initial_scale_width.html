@@ -2,25 +2,24 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8">
-        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta content="black" name="apple-mobile-web-app-status-bar-style">
         <meta content="telephone=no" name="format-detection">
         <meta content="email=no" name="format-detection">
         <meta name="keywords" content="" />
         <meta name="description" content="" />
-        <title>device-width宽度测试</title>
+        <meta name="viewport" content="width=750,user-scalable=no">
+        <title>只设置width=750</title>
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <!-- 页面结构[[ -->
-        <div class="box" style="width: 100%">width : 100%</div>
-        <div class="box" style="width: 50%">width : 50%</div>
-        <div class="box" style="width: 980px">width : 980px</div>
-        <div class="box" style="width: 1200px">width : 1200px</div>
         <div id="layout_viewport" class="box">layout viewport宽度</div>
         <div id="visual_viewport" class="box">visual viewport宽度</div>
-        <div id="screen_width" class="box">device viewport宽度</div>
+        <div class="box" style="width: 414px">width: 414px</div>
+        <div class="box" style="width: 828px">width: 828px</div>
+        <div class="box" style="width: 375px">width: 375px</div>
+        <div class="box" style="width: 750px">width: 750px</div>
         <!-- 页面结构]] -->
     </body>
     <script>
@@ -28,9 +27,13 @@
         document.getElementById('layout_viewport').innerHTML = "当前layout viewport宽度为：" + layout_viewport;
 
         var visual_viewport = window.innerWidth;
+        
+        //var visual_viewport = parseInt(window.screen.width);
         document.getElementById('visual_viewport').innerHTML = "当前visual viewport宽度为：" + visual_viewport;
-
-        var screen_width = screen.width;
-        document.getElementById('screen_width').innerHTML = "当前screen width宽度为：" + screen_width;
+        
+        /*
+        document.body.addEventListener('gestureend', function() {
+            alert(window.innerWidth);
+        }, false);*/
     </script>
 </html>

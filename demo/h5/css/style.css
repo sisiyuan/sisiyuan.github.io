@@ -16,19 +16,21 @@
     height: 120px;
     border: 1px solid #000;
     margin: 20px;
-    background: url(../img/1.png) no-repeat 50% auto;
+    float: left;
 }
 .px-box-border{
     width: 120px;
     height: 120px;
     border: 0.5px solid #000;
     margin: 20px;
+    float: left;
 }
 .px-box-ps{
     width: 120px;
     height: 120px;
     position: relative;
     margin: 20px;
+    float: left;
 }
 
 .px-box-ps:before{
@@ -39,20 +41,31 @@
     height: 200%;
     content: ' ';
     -webkit-transform: scale(0.5);
-   -webkit-transform-origin: left top;
-   border: 1px solid #000;
+    -webkit-transform-origin: left top;
+    border: 1px solid #000;
 }
 
-
-.px-box-image{
+.px-box-linear{
     width: 120px;
     height: 120px;
     margin: 20px;
+    float: left;
     background:
     linear-gradient(to bottom, #000 50%, transparent 50%) left top / 100% 1px no-repeat,
     linear-gradient(to top, #000 50%, transparent 50%) left bottom / 100% 1px no-repeat,
     linear-gradient(to right, #000 50%, transparent 50%) left top / 1px 100% no-repeat,
     linear-gradient(to left, #000 50%, transparent 50%) right top / 1px 100% no-repeat;
+}
+
+.px-box-bgimage{
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    float: left;
+    background:
+    url(../img/1bd.png) left top/100% 1px repeat-x;
+    border-width: 1px 0;
+    border-image: url(../img/1bd.png) 2 0 stretch;
 }
 
 .mb20{margin-bottom: 20px;}
